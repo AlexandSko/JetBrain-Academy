@@ -1,11 +1,20 @@
 This is a TicTacToe game on Python3!
 
-You need two players.
 
-First one of you moves as X, and then the other one moves as O.
+Nowadays, this game is known all over the world. Each country may have its own version of the name,
+
+sometimes the rules are different, but the meaning of the game remains the same.
+
+Below are the main rules that may be familiar to you since childhood.
+
+Tic-tac-toe is a game played by two players on a 3x3 field where the duel takes place.
+
+One of the players plays as 'X', and the other player is 'O'. 'X' plays first, then the 'O' side plays, and so on.
+
+The first player that writes 3 'X' or 3 'O' in a straight line (including diagonals) wins.
 
 
-
+_____________________________________________________________________________________________________________________________
 
 Description of game field:
 
@@ -59,3 +68,23 @@ The program is working in the following way:
 
 
 Good luck gaming!
+
+
+
+
+
+_____________________________________________________________________________________________________________________________
+
+References:
+
+    1) https://hyperskill.org/projects/73?track=2
+
+    2) https://hyperskill.org/projects/73/stages/399/implement
+
+    3) https://hyperskill.org/projects/73/stages/400/implement
+
+    4) https://hyperskill.org/projects/73/stages/401/implement
+
+    5) https://hyperskill.org/projects/73/stages/402/implement
+
+    6) https://hyperskill.org/projects/73/stages/403/implement

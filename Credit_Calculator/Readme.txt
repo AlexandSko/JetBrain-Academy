@@ -258,6 +258,23 @@ Finally, the program computes the value of overpayment, and we have our real fun
 
 
 
+_____________________________________________________________________________________________________________________________
+
+References:
+
+    1) https://hyperskill.org/projects/90?track=2
+
+    2) https://hyperskill.org/projects/90/stages/500/implement
+
+    3) https://hyperskill.org/projects/90/stages/501/implement
+
+    4) https://hyperskill.org/projects/90/stages/502/implement
+
+    5) https://hyperskill.org/projects/90/stages/503/implement
+
+
+
+
 
 
 

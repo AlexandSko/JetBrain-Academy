@@ -37,4 +37,6 @@ ________________________________________________________________________________
 
 References:
 
-https://hyperskill.org/projects/69/stages/372/implement
+    1) https://hyperskill.org/projects/69/stages/372/implement
+
+    2) https://hyperskill.org/projects/69?track=2
