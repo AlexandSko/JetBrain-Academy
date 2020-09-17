@@ -1,4 +1,5 @@
-def machine_state(water, milk, coffee_beans, disposable_cups, money):
+def machine_state():
+    global water, milk, coffee_beans, disposable_cups, money
     print(f"\nThe coffee machine has:",
           f"{water} of water",
           f"{milk} of milk",
@@ -7,73 +8,83 @@ def machine_state(water, milk, coffee_beans, disposable_cups, money):
           f"{money} of money", sep="\n", end="\n\n")
 
 
-def espresso(water, milk, coffee_beans, disposable_cups, money):
+def espresso():
+    global water, milk, coffee_beans, disposable_cups, money
     water -= 250
     coffee_beans -= 16
     disposable_cups -= 1
     money += 4
-    return water, milk, coffee_beans, disposable_cups, money
 
 
-def latte(water, milk, coffee_beans, disposable_cups, money):
+def latte():
+    global water, milk, coffee_beans, disposable_cups, money
     water -= 350
     milk -= 75
     coffee_beans -= 20
     disposable_cups -= 1
     money += 7
-    return water, milk, coffee_beans, disposable_cups, money
 
 
-def cappuccino(water, milk, coffee_beans, disposable_cups, money):
+def cappuccino():
+    global water, milk, coffee_beans, disposable_cups, money
     water -= 200
     milk -= 100
     coffee_beans -= 12
     disposable_cups -= 1
     money += 6
-    return water, milk, coffee_beans, disposable_cups, money
 
 
-def buy(water, milk, coffee_beans, disposable_cups, money):
+def buy():
     print("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:")
     type_of_coffee = int(input())
     if type_of_coffee == 1:
-        return espresso(water, milk, coffee_beans, disposable_cups, money)
+        espresso()
     elif type_of_coffee == 2:
-        return latte(water, milk, coffee_beans, disposable_cups, money)
+        latte()
     elif type_of_coffee == 3:
-        return cappuccino(water, milk, coffee_beans, disposable_cups, money)
+        cappuccino()
+    else:
+        ...
 
 
-def fill(water, milk, coffee_beans, disposable_cups, money):
+def fill():
+    global water, milk, coffee_beans, disposable_cups
     water += int(input("Write how many ml of water do you want to add:\n"))
     milk += int(input("Write how many ml of milk do you want to add:\n"))
     coffee_beans += int(input("Write how many grams of coffee beans do you want to add:\n"))
     disposable_cups += int(input("Write how many disposable cups of coffee do you want to add:\n"))
-    return water, milk, coffee_beans, disposable_cups, money
 
 
-def take(water, milk, coffee_beans, disposable_cups, money):
+def take():
+    global money
     print(f'I gave you ${money}')
     money = 0
-    return water, milk, coffee_beans, disposable_cups, money
 
 
-def get_action(water, milk, coffee_beans, disposable_cups, money):
+def get_action():
     action = input("Write action (buy, fill, take):\n")
     if action == "buy":
-        return buy(water, milk, coffee_beans, disposable_cups, money)
+        buy()
     elif action == "fill":
-        return fill(water, milk, coffee_beans, disposable_cups, money)
+        fill()
     elif action == "take":
-        return take(water, milk, coffee_beans, disposable_cups, money)
+        take()
+    else:
+        ...
 
 
-def coffee_machine(water, milk, coffee_beans, disposable_cups, money):
-    machine_state(water, milk, coffee_beans, disposable_cups, money)
-    water, milk, coffee_beans, disposable_cups, money = get_action(water, milk, coffee_beans, disposable_cups, money)
-    machine_state(water, milk, coffee_beans, disposable_cups, money)
+def coffee_machine():
+    machine_state()
+    get_action()
+    machine_state()
 
 
 if __name__ == "__main__":
 
-    coffee_machine(water=400, milk=540, coffee_beans=120, disposable_cups=9, money=550)
+    water = 400
+    milk = 540
+    coffee_beans = 120
+    disposable_cups = 9
+    money = 550
+
+    coffee_machine()
